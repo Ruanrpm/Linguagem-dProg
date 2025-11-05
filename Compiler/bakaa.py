@@ -1,10 +1,10 @@
 TT_NUMBER = 'NUMBER'
 TT_PLUS = 'PLUS'
-TT_MINOS = 'MINUS'
+TT_MINUS = 'MINUS'
 TT_MUL = 'MUL'
 TT_DIV = 'DIV'
-TT_LPAREN = 'LPAREM'
-TT_RPAREM = 'RPAREM'
+TT_LPAREN = 'LPAREN'
+TT_RPAREM = 'RPAREN'
 TT_EOF = 'EOF'
 
 class Token:
@@ -12,7 +12,7 @@ class Token:
         self.type = type
         self.valor = valor
 
-    def __print__(self):
+    def __repr__(self):
         if(self.valor is not None):
             return f'{self.type}:{self.valor}'
         return f'{self.type}' 
@@ -41,7 +41,7 @@ class Lexer:
                 tokens.append(Token(TT_PLUS))
                 self.avancar()
             elif(self.atual == '-'):
-                tokens.append(Token(TT_MINOS))
+                tokens.append(Token(TT_MINUS))
                 self.avancar()
             elif(self.atual == '*'):
                 tokens.append(Token(TT_MUL))
