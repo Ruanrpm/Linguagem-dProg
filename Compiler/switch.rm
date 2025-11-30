@@ -1,0 +1,8 @@
+x = 3
+SWITCH x CASE 1 PRINT 100 CASE 2 PRINT 200 CASE 4 PRINT 19 DEFAULT PRINT 0
+                                 
+SWITCH x CASE 3 PRINT 300 DEFAULT PRINT 400
+                                 
+PRINT x     
+
+python .\shell.py .\switch.rm
